@@ -503,8 +503,10 @@ class Analysis:
 
             plt.savefig(file_name, format='png')
 
-        if show:
+        if show == True:
             plt.show()
+        elif show == False:
+            plt.close()
 
     def pdf(self, show: bool=True, file_name: str=None,
             watermark_text=None):
@@ -720,8 +722,10 @@ class Analysis:
         if file_name:
             plt.savefig(file_name)
 
-        if show:
+        if show == True:
             plt.show()
+        elif show == False:
+            plt.close()
 
     def b(self, percent_failed: (float, str)=10.0):
         r"""
@@ -1019,8 +1023,10 @@ class Weibayes:
 
         if file_name:
             plt.savefig(file_name)
-        if show:
+        if show == True:
             plt.show()
+        elif show == False:
+            plt.close()
 
     def _plot_annotate(self):
         ax = plt.gca()
